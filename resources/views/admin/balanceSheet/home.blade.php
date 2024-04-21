@@ -15,9 +15,9 @@
                     <hr class="mb-6">
                     @if(Session::has('success'))
                     <div class="text-black border border-green-400 px-4 py-3 rounded relative bg-green-100" style="background-color: #d4edda !important;" role="alert">
-    <strong class="font-bold">Success!</strong>
-    <span class="block sm:inline">{{ Session::get('success') }}</span>
-</div>
+                        <strong class="font-bold">Success!</strong>
+                        <span class="block sm:inline">{{ Session::get('success') }}</span>
+                    </div>
                     @endif
                     <div class="overflow-x-auto">
                         <table class="table-auto w-full border-collapse">
@@ -31,7 +31,11 @@
                                     <th class="px-4 py-2">Expense</th>
                                     <th class="px-4 py-2">Balance</th>
                                     <th class="px-4 py-2">User</th>
+                                    @auth
+                                    @if(auth()->user()->isAdmin())
                                     <th class="px-4 py-2">Action</th>
+                                    @endif
+                                    @endauth
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,12 +49,16 @@
                                     <td class="text-center px-4 py-2">{{ $balance->expense }}</td>
                                     <td class="text-center px-4 py-2">{{ $balance->balance }}</td>
                                     <td class="text-center px-4 py-2">{{ $balance->user->name }}</td>
+                                    @auth
+                                    @if(auth()->user()->isAdmin())
                                     <td class="align-middle">
-                                            <div class="btn-group" role="group" aria-label="Basic example">
-                                                <a href="{{ route('admin.balanceSheet.edit', ['id'=>$balance->id]) }}" type="button" class="btn btn-secondary">Edit</a>
-                                                <a href="{{ route('admin.balanceSheet.delete', ['id'=>$balance->id]) }}" type="button" class="btn btn-danger">Delete</a>
-                                            </div>
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <a href="{{ route('admin.balanceSheet.edit', ['id'=>$balance->id]) }}" type="button" class="btn btn-secondary text-blue-600">Edit</a>
+                                            <a href="{{ route('admin.balanceSheet.delete', ['id'=>$balance->id]) }}" type="button" class="btn btn-danger text-red-600">Delete</a>
+                                        </div>
                                     </td>
+                                    @endif
+                                    @endauth
                                 </tr>
                                 @endforeach
                             </tbody>

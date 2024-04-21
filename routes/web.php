@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BalanceSheetController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,10 +29,15 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth', 'admin'])->group(function(){
     Route::get('admin/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
-Route::get('balancesheets/edit/{id}', [BalanceSheetController::class, 'edit'])->name('admin.balanceSheet.edit');
-Route::get('balancesheets/delete/{id}', [BalanceSheetController::class, 'delete'])->name('admin.balanceSheet.delete');
 
-Route::put('balancesheets/update/{id}', [BalanceSheetController::class, 'update'])->name('admin.balanceSheet.update');
+    Route::get('balancesheets/edit/{id}', [BalanceSheetController::class, 'edit'])->name('admin.balanceSheet.edit');
+    Route::get('balancesheets/delete/{id}', [BalanceSheetController::class, 'delete'])->name('admin.balanceSheet.delete');
+    Route::put('balancesheets/update/{id}', [BalanceSheetController::class, 'update'])->name('admin.balanceSheet.update');
+
+    Route::get('/register', [RegisteredUserController::class, 'create'])->name('admin.register');
+    Route::post('register', [RegisteredUserController::class, 'store'])->name('admin.register.store');
+    Route::get('/admin/all-users', [HomeController::class, 'showAllUsers'])->name('admin.all_users');
+    Route::delete('/admin/users/{id}', [HomeController::class, 'deleteUser'])->name('admin.users.delete');
 
    // Route::get('/admin/balancesheets', [BalanceSheetController::class, 'index'])->name('admin.balanceSheet');
 });
