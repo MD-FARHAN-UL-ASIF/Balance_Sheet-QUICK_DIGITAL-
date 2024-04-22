@@ -8,7 +8,7 @@ use App\Models\BalanceSheet;
 class BalanceSheetController extends Controller
 {
     public function index(){
-        $balances = BalanceSheet::all(); // Assuming you want to fetch all balance sheets
+        $balances = BalanceSheet::all();
         return view('admin.balanceSheet.home', compact('balances'));
     }
 

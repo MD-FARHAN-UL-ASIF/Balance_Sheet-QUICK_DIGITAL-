@@ -11,7 +11,7 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div class="flex justify-between items-center mb-4">
                         <h1 class="text-2xl font-bold">Balance Sheet X Quick Digital</h1>
-                    <a href="{{ route('admin.balanceSheet') }}" class="inline-block bg-blue-500 text-white py-2 px-4 rounded-md mb-4 hover:bg-blue-600 transition duration-300 ease-in-out">Go Back</a>
+                    <a href="{{ route('admin.balanceSheet') }}" class="inline-block bg-blue-500 text-gray-900 dark:text-gray-100 py-2 px-4 rounded-md mb-4 hover:bg-blue-600 transition duration-300 ease-in-out">Go Back</a>
 
                     </div>
                     <hr class="my-4">
@@ -72,7 +72,7 @@
 
 
 <div class="mb-4 flex justify-center">
-    <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition duration-300 ease-in-out">Submit</button>
+    <button type="submit" class="bg-red-500 hover:bg-red-600 text-gray-900 dark:text-gray-100 font-bold py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition duration-300 ease-in-out">Submit</button>
 </div>
 
 

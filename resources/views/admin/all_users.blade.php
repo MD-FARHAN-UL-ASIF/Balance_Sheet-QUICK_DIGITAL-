@@ -11,7 +11,7 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div class="flex justify-between items-center mb-6">
                         <h1 class="text-2xl font-bold">List of Users</h1>
-                        <a href="{{ route('admin.dashboard') }}" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out">Back to Dashboard</a>
+                        <a href="{{ route('admin.dashboard') }}" class="bg-blue-500 hover:bg-blue-600 text-gray-900 dark:text-gray-100 py-2 px-4 rounded-md transition duration-300 ease-in-out">Back to Dashboard</a>
 
                     </div>
                     <div class="overflow-x-auto">

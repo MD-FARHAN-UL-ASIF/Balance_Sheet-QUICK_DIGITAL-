@@ -10,15 +10,15 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100 grid-cols-6 text-center">
                     {{-- <p class="text-lg">{{ __("You're logged in!") }}</p> --}}
-                    <a href="{{ route('admin.balanceSheet') }}" class="inline-block bg-blue-500 hover:bg-blue-600 text-white hover:text-gray-200 py-2 px-4 rounded-md transition duration-300 ease-in-out mt-4 font-bold text-xl">Balance Sheets</a>
+                    <a href="{{ route('admin.balanceSheet') }}" class="inline-block text-gray-900 dark:text-gray-100 py-2 px-4 rounded-md transition duration-300 ease-in-out mt-4 font-bold text-xl">Balance Sheets</a>
                 </div>
 
                 <div class="p-6 text-gray-900 dark:text-gray-100 grid-cols-6 text-center">
-                    <a href="{{ route('admin.register') }}" class="inline-block bg-green-500 hover:bg-green-600 text-white hover:text-gray-200 py-2 px-4 rounded-md transition duration-300 ease-in-out mt-4 ml-4 font-bold text-xl">Register New User</a>
+                    <a href="{{ route('admin.register') }}" class="inline-block text-gray-900 dark:text-gray-100 py-2 px-4 rounded-md transition duration-300 ease-in-out mt-4 ml-4 font-bold text-xl">Register New User</a>
                 </div>
 
                 <div class="p-6 text-gray-900 dark:text-gray-100 grid-cols-6 text-center">
-                    <a href="{{ route('admin.all_users') }}" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white hover:text-gray-200 py-2 px-4 rounded-md transition duration-300 ease-in-out mt-4 ml-4 font-bold text-xl">View All Users</a>
+                    <a href="{{ route('admin.all_users') }}" class="inline-block text-gray-900 dark:text-gray-100 py-2 px-4 rounded-md transition duration-300 ease-in-out mt-4 ml-4 font-bold text-xl">View All Users</a>
                 </div>
             </div>
         </div>

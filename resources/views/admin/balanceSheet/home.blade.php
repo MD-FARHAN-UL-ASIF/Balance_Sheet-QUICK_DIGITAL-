@@ -10,7 +10,7 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div class="flex justify-between items-center mb-6">
                         <h1 class="text-2xl font-bold">List of Balance Sheet</h1>
-                        <a href="{{ route('admin.balanceSheet.create') }}" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out">Add Entity</a>
+                        <a href="{{ route('admin.balanceSheet.create') }}" class="bg-blue-500 text-gray-900 dark:text-gray-100 py-2 px-4 rounded-md transition duration-300 ease-in-out">Add Entry</a>
                     </div>
                     <hr class="mb-6">
                     @if(Session::has('success'))

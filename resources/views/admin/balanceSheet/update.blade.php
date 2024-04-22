@@ -40,7 +40,7 @@
                         </div>
 </div>
                         <div class="mb-4 mb-4 flex justify-center">
-                            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out">Update</button>
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-gray-900 dark:text-gray-100 py-2 px-4 rounded-md transition duration-300 ease-in-out">Update</button>
                         </div>
                     </form>
                 </div>
